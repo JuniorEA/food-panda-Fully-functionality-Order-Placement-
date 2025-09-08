@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery services for your favourite foods</title>
+    <link rel="shortcut icon" href="assests/icons/favicon-icon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="css files/style.css">
+    <link rel="stylesheet" href="css files/mediaqurey.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0  /jquery.counterup.min.js"></script>
+    <script src="js files/script.js" defer></script>        
+    <script src="https://smtpjs.com/v3/smtp.js"></script>      
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZmK9OfevYSLVQaR5H1+f+zJwYpOohg5V9zzTtmI3UksdQRVvoxMfooAo0vw5qX2hMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/                                                   6.4.0/css/brands.min.css" integrity="sha512-7rSLT8C3hBqk1bKp2aH2XpG6iG7fXUeJHqZ9LP+XcUQy9cZl5V2FfXxDzY0sM8Qm8P3r0iK4n5V0L2VY3Qm6UQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZmK9OfevYSLVQaR5H1+f+zJwYpOohg5V9zzTtmI3UksdQRVvoxMfooAo0vw5qX2hMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/       
+6.4.0/css/light.min.css" integrity="sha512-+l9QpIMpX2aH+Ykz8Kc6s0m9A7rT3gkX7+5b5H1+f+zJwYpOohg5V9zzTtmI3UksdQRVvoxMfooAo0vw5qX2hMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="overflow-x-hidden"> 
+
+    <!-- Header Section Start -->
+     <center>
+  <header class="container-fluid head-1 d-lg-flex d-md-flex d-sm-none" id="top-banner">
+    <div class="col-lg-4">
+      <button class="btn-SIGN-UP">SIGN UP TO BE RESTAURANT PARTNER</button>
+    </div>
+    <div class="col-lg-4 col-md-4 d-block">
+      <button class="btn-SIGN-bussines">SIGN UP FOR A BUSINESS ACCOUNT</button>
+    </div>
+    <!-- ❌ Close Button -->
+    <span class="close-btn">&times;</span>
+  </header>
+
+        </center>
+        
+        <!-- <header class="container-fluid head-2">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="navbar-brand d-flex align-items-center">
+        <img src="assests/icons/favicon-icon.webp" height="50px" alt="">
+        <a class="brnd-name" href="index.html">foodpanda</a>
+      </div>
+
+      <div class="collapse navbar-collapse collapse-menu" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <center>
+            <li class="nav-item d-flex">
+              <a aria-current="page" href="#">
+                <i class="bi bi-geo-alt-fill" style="color: #2E3138; margin-left: 5px; margin-top: 20px;"></i>
+                <button class="location">Karachi</button>
+              </a>
+            </li>
+          </center>
+
+          <div class="left-part-1 position-absolute end-0 d-lg-flex d-none">
+
+             Login button 
+            <li id="login-section" class="nav-item">
+              <a href="login.html"><button class="btn-log">Log in</button></a>
+            </li>
+
+             Signup button 
+            <li id="signup-section" class="nav-item">
+              <a href="signup.html"><button class="delivery-btn">Sign up</button></a>
+            </li>
+
+          Language dropdown
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Language
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">EN</a></li>
+              </ul>
+            </li>
+
+            Cart 
+            <li class="nav-item">
+              <a href="#"><button class="cart-icon"></button></a>
+            </li>
+
+            Profile Icon 
+            <li id="profile-section" class="nav-item profile-icon" style="display:none;">
+              <a href="account.html">
+                <i class="bi bi-person-circle"></i>
+                <span id="userName">My Account</span>
+              </a>
+            </li>
+
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> -->
+
+<div id="header"></div>
+
+<!--main header  -->
+
+<header class="container-fluid main-menu d-lg-flex d-md-flex d-block" >
+<div class="col-lg-8 menu d-lg-flex d-flex">
+<div class="item-1 un-item">
+    <center>
+
+        <i class="bi bi-bicycle"></i>
+        <a href="#" class="menu-item">Delivery</a> 
+    </center>
+</div>
+<div class="item-1">
+    <center>
+
+        <i class="bi bi-car-front"></i>
+        <a href="#" class="menu-item">Pick-up</a> 
+    </center>
+</div>
+<div class="item-1">
+    <center>
+
+        <i class="bi bi-bag"></i>
+        <a href="#" class="menu-item">Panda-mart</a> 
+    </center>
+</div>
+
+</div>
+<div class="col-lg-4 ">
+  <input type="text" class="search-input" placeholder="Search for restaurant, cuisine or a dish">
+</div>
+</header>
+
+    <!-- Header Section End -->
+
+    <!-- Hero-Section -->
+
+<section class="container-fluid mt-5" >
+<div class="container-fluid Hero-Section  d-lg-flex d-md-flex d-block">
+  <div class="col-lg-6 col-md-6 col-12 left-part ">
+<span class="heading ">
+Sign up for free delivery on your first order 
+</span><br>
+<button class="sign-up">Sign-up</button>
+  </div>
+  <div class="col-lg-6 col-md-6 col-12 right-part">
+    <img src="./assests/hero-sec/rlp-nc-banner-logo-mweb.png" class="panda-pic" alt="">
+  </div>
+</div>
+</section>
+
+<!-- Daily sections -->
+
+<section class="container-fluid mt-5 ">
+  <p class="heading-1">Your daily deals</p>
+  <div class="container-fluid daily-section d-lg-flex d-md-flex d-block">
+    <div class="col-lg-6 col-md-6 col-12 daily-left-part ">
+      <img src="./assests/foods-img/desktop_tile_EnFRGy.png" class="img-fluid" alt="">
+    </div>
+    <div class="col-lg-6 col-md-6 col-12 daily-left-part">
+      <img src="./assests/foods-img/desktop_tile_EnwLtn.png" class="img-fluid" alt="">
+    </div>
+
+  </div>
+</section>
+
+<!-- Cuisines-carousel -->
+<section class="container-fluid mt-5 ">
+  <div class="container-fluid">
+    <p class="heading-1">Cuisine for you</p>
+
+    <div class="carousel-container">
+      <button class="prev" data-target="cuisine-carousel"><i class="bi bi-arrow-left"></i></button>
+
+      <div class="carousel" id="cuisine-carousel">
+        <div class="item cards" id="halwa-puri">
+          <img src="./assests/foods-img/258.png" alt="Halwa Puri">
+          <p>Halwa Puri</p>
+        </div>
+        <div class="item cards" id="paratha">
+          <img src="./assests/foods-img/259.png" alt="Paratha">
+          <p>Paratha</p>
+        </div>
+        <div class="item cards" id="pasta">
+          <img src="./assests/foods-img/103.png" alt="Pasta">
+          <p>Pasta</p>
+        </div>
+        <div class="item cards" id="nihari">
+          <img src="./assests/foods-img/252.png" alt="Nihari">
+          <p>Nihari</p>
+        </div>
+        <div class="item cards" id="haleem">
+          <img src="./assests/foods-img/250.png" alt="Haleem">
+          <p>Haleem</p>
+        </div>
+        <div class="item cards" id="shawarma">
+          <img src="./assests/foods-img/126.png" alt="Shawarma">
+          <p>Shawarma</p>
+        </div>
+        <div class="item cards" id="chinese">
+          <img src="./assests/foods-img/74.png" alt="Chinese">
+          <p>Chinese</p>
+        </div>
+        <div class="item cards" id="fast-food">
+          <img src="./assests/foods-img/86.png" alt="Fast Food">
+          <p>Fast Food</p>
+        </div>
+        <div class="item cards" id="biryani">
+          <img src="./assests/foods-img/193.png" alt="Biryani">
+          <p>Biryani</p>
+        </div>
+        <div class="item cards" id="desert">
+          <img src="./assests/foods-img/84.png" alt="Desert">
+          <p>Desert</p>
+        </div>
+        <div class="item cards" id="samosa">
+          <img src="./assests/foods-img/257.png" alt="Samosa">
+          <p>Samosa</p>
+        </div>
+        <div class="item cards" id="pulao">
+          <img src="./assests/foods-img/248.png" alt="Pulao">
+          <p>Pulao</p>
+        </div>
+      </div>
+
+      <button class="next" data-target="cuisine-carousel"><i class="bi bi-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+
+
+<!-- Foods Card -->
+<section>
+  <div class="container-fluid mt-5">
+    <p class="heading-1">New on foodpanda</p>
+
+    <div class="carousel-container">
+      <button class="prev" data-target="food-carousel"><i class="bi bi-arrow-left"></i></button>
+
+      <div class="carousel" id="food-carousel">
+        <!-- card 1 -->
+        <div class="item-card cards">
+          <img src="./assests/foods-img/sweets.jpg" class="img-fluid" alt="Suaad Sweets">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Suaad Sweets and B...</p>
+              <p class="food-rating rating"><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.3</p>
+            </div>
+            <p class="region">Cakes & Bakery</p>
+            <p class="region"><i class="bi bi-clock"></i> 10-25 min · <i class="bi bi-bicycle"></i> <b>Rs:89</b></p>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="item-card cards">
+          <img src="./assests/foods-img/crave flix.jpg" class="img-fluid" alt="Cravefilx Cafe">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">CraveFlix Cafe</p>
+              <p class="food-rating rating"><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.5</p>
+            </div>
+            <p class="region">Fast Food</p>
+            <p class="region"><i class="bi bi-clock"></i> 25-28 min · <i class="bi bi-bicycle"></i> <span class="free"><b >Free</b></span> </p>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="item-card cards">
+          <img src="./assests/foods-img/hi food.jpg" class="img-fluid" alt="H.I Foods">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">H.I Foods</p>
+              <!-- rating optional -->
+            </div>
+            <p class="region">Pakistani</p>
+            <p class="region"><i class="bi bi-clock"></i> 20-30 min · <i class="bi bi-bicycle"></i> <span class="free"><b >Free</b></span> </p>
+          </div>
+        </div>
+
+        <!-- card 4 -->
+        <div class="item-card cards">
+          <img src="./assests/foods-img/lucky-broast.jpg" class="img-fluid" alt="Suaad Sweets">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Lucky Broast</p>
+              <p class="food-rating rating"><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.6</p>
+            </div>
+            <p class="region">Pakistani</p>
+            <p class="region"><i class="bi bi-clock"></i> 25-35 min · <i class="bi bi-bicycle"></i> <b>Rs:129</b></p>
+          </div>
+        </div>
+
+        <!-- card 5 -->
+        <div class="item-card cards">
+          <img src="./assests/foods-img/B.B.jpg" class="img-fluid" alt="Suaad Sweets">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">B.Broast</p>
+              <p class="food-rating rating"><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.7</p>
+            </div>
+            <p class="region">Fast Food</p>
+            <p class="region"><i class="bi bi-clock"></i> 15-25 min · <i class="bi bi-bicycle"></i> <b>Rs:89</b></p>
+          </div>
+        </div>
+      </div>
+
+      <button class="next" data-target="food-carousel"><i class="bi bi-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- upto 30% discount  -->
+
+<section>
+  <div class="container-fluid mt-5">
+    <h2 class="heading-1">up to 30% off</h2>
+
+    <div class="carousel-container">
+      <button class="prev" data-target="food-carousel"><i class="bi bi-arrow-left"></i></button>
+
+      <div class="carousel" id="food-carousel">
+        <!-- card 1 -->
+        <div class="item-card cards">
+          <img src="./assests/foods-img/rehmat-e-shereen.jpg" class="img-fluid" alt="Suaad Sweets">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Rehmat-e-Shereen</p>
+              <p class="food-rating rating"><i class="bi bi-star-fill" style="color:#FF9529"></i> 5.0</p>
+            </div>
+            <p class="region">$$$ . Cakes & Bakery</p>
+            <p class="region"><i class="bi bi-clock"></i> 15-25 min · <i class="bi bi-bicycle"></i> <b>Rs:89</b></p>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="item-card cards">
+          <img src="./assests/foods-img/Kababjees.jpg" class="img-fluid" alt="Cravefilx Cafe">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Kababjees Friedchiken</p>
+              <p class="food-rating rating"><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.7</p>
+            </div>
+            <p class="region">$$$ . Fast Food</p>
+            <p class="region"><i class="bi bi-clock"></i> 30-40 min · <i class="bi bi-bicycle"></i> <b >99</b> </p>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="item-card cards">
+          <img src="./assests/foods-img/Broadway-pizza.jpg" class="img-fluid" alt="H.I Foods">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Broadway Pizza</p>
+              <p class="food-rating rating"><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.7</p>
+            </div>
+            <p class="region">$$$ . Pizza</p>
+            <p class="region"><i class="bi bi-clock"></i> 20-30 min · <i class="bi bi-bicycle"></i> <span class="free"><b >Free</b></span> </p>
+          </div>
+        </div>
+
+        <!-- card 4 -->
+        <div class="item-card cards">
+          <img src="./assests/foods-img/burger-lab.jpg" class="img-fluid" alt="Suaad Sweets">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Burger Lab</p>
+              <p class="food-rating rating"><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.2</p>
+            </div>
+            <p class="region">$$$ . Burgers</p>
+            <p class="region"><i class="bi bi-clock"></i> 65-85 min · <i class="bi bi-bicycle"></i> <b>Rs:150</b></p>
+          </div>
+        </div>
+
+        <!-- card 5 -->
+        <div class="item-card cards">
+          <img src="./assests/foods-img/california-pizza.jpg" class="img-fluid" alt="Suaad Sweets">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">California Pizza</p>
+              <p class="food-rating rating"><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.5</p>
+            </div>
+            <p class="region">Fast Food</p>
+            <p class="region"><i class="bi bi-clock"></i> 40-60 min · <i class="bi bi-bicycle"></i> <b>Rs:199</b></p>
+          </div>
+        </div>
+      </div>
+
+      <button class="next" data-target="food-carousel"><i class="bi bi-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+
+
+<!-- All Restaurant -->
+
+<section>
+  <div class="container-fluid">
+<p class="heading-1">All restaurants</p>
+<div class="container-fluid  mb-5 gap-10 ">
+  <div class="row mb-4">
+    <div class="col-lg-4">
+      <div class="restaurant-1">
+        <img src="./assests/foods-img/almalik nali.jpg" class="img-fluid" alt="">
+        <div class="card-content">
+          <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">A.Malik Nalli Biryani & Pakwan</p>
+              <p class="food-rating rating " ><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.7</p>
+            </div>
+            <p class="region">$ . Pakistani</p>
+            <p class="region"><i class="bi bi-clock"></i> 30-40 min · <i class="bi bi-bicycle"></i> <b>Rs:104</b></p>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="restaurant-1">
+        <img src="./assests/foods-img/zam zam biryani.jpg" class="img-fluid" alt="">
+        <div class="card-content">
+          <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Zam Zam Biryani & Pakwan</p>
+              <p class="food-rating rating " ><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.1</p>
+            </div>
+            <p class="region">$ . Pakistani</p>
+            <p class="region"><i class="bi bi-clock"></i> 20-30 min · <i class="bi bi-bicycle"></i> <b>Rs:89</b></p>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="restaurant-1">
+        <img src="./assests/foods-img/malik nalli biryain.jpg" class="img-fluid" alt="">
+        <div class="card-content">
+          <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Allah Malik NAlli Biryani & Pakwan</p>
+              <p class="food-rating rating " ><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.7</p>
+            </div>
+            <p class="region">$ . Pakistani</p>
+            <p class="region"><i class="bi bi-clock"></i> 30-40 min · <i class="bi bi-bicycle"></i> <b>Rs:104</b></p>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="row mb-4">
+    <div class="col-lg-4">
+      <div class="restaurant-1">
+        <img src="./assests/foods-img/Broadway-pizza.jpg" class="img-fluid" alt="">
+        <div class="card-content">
+          <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Broad Way Shah-Faisal</p>
+              <p class="food-rating rating " ><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.7</p>
+            </div>
+            <p class="region">$$$ . Pizza</p>
+            <p class="region"><i class="bi bi-clock"></i> 30-40 min · <i class="bi bi-bicycle"></i> <b>Rs:104</b></p>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="restaurant-1">
+        <img src="./assests/foods-img/kababjeesshahfaisal.jpg" class="img-fluid" alt="">
+        <div class="card-content">
+          <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Kababjees Shah-Faisal</p>
+              <p class="food-rating rating " ><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.9</p>
+            </div>
+            <p class="region">$$$ . Cakes & Bakery</p>
+            <p class="region"><i class="bi bi-clock"></i> 25-35 min · <i class="bi bi-bicycle"></i> <b>Rs:104</b></p>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="restaurant-1">
+        <img src="./assests/foods-img/Kababjees.jpg" class="img-fluid" alt="">
+        <div class="card-content">
+          <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Kababjees Friedchiken</p>
+              <p class="food-rating rating " ><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.8</p>
+            </div>
+            <p class="region">$$$ . Broast</p>
+            <p class="region"><i class="bi bi-clock"></i> 35-45 min · <i class="bi bi-bicycle"></i> <b>Rs:104</b></p>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="row  mb-4">
+    <div class="col-lg-4">
+      <div class="restaurant-1">
+        <img src="./assests/foods-img/xx7f-listing.jpg" class="img-fluid" alt="">
+        <div class="card-content">
+          <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">New Data Food Corner</p>
+              <p class="food-rating rating " ><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.6</p>
+            </div>
+            <p class="region">$ . Pakistani</p>
+            <p class="region"><i class="bi bi-clock"></i> 30-40 min · <i class="bi bi-bicycle"></i> <b>Rs:104</b></p>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="restaurant-1">
+        <img src="./assests/foods-img/Broadway-pizza.jpg" class="img-fluid" alt="">
+        <div class="card-content">
+          <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Pizza Max Shah-Faisal</p>
+              <p class="food-rating rating " ><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.1</p>
+            </div>
+            <p class="region">$ . Pakistani</p>
+            <p class="region"><i class="bi bi-clock"></i> 20-30 min · <i class="bi bi-bicycle"></i> <b>Rs:89</b></p>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="restaurant-1">
+        <img src="./assests/foods-img/al-raheem.jpg" class="img-fluid" alt="">
+        <div class="card-content">
+          <div class="d-flex align-items-center justify-content-between mb-1">
+              <p class="food-heading">Al Raheem Biryani & Pakwan</p>
+              <p class="food-rating rating " ><i class="bi bi-star-fill" style="color:#FF9529"></i> 4.9</p>
+            </div>
+            <p class="region">$ . Pakistani</p>
+            <p class="region"><i class="bi bi-clock"></i> 25-35 min · <i class="bi bi-bicycle"></i> <b>Rs:104</b></p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+<!-- blogs -->
+<section class="">
+  <div class="container-fluid  mt-5">
+<div class="container con-1">
+  <p class="heading">Food Delivery in Karachi From Only The Best Restaurants</p>
+  <p class="para">For those who like good food, exciting new options are now available in Karachi. Whether you live in Karachi, or are simply enjoying a holiday in the area, culinary delights aplenty are now just a simple online order away. The Karachi food delivery service has enjoyed a culinary renaissance in recent years, with a blossoming of new restaurants and take away eateries on almost every street; in fact, there are now literally hundreds of restaurants in Karachi, and foodpanda.com is the fastest, easiest and most reliable way of locating and ordering from the outlet of your choice. And whether you're in the mood for some comfortably familiar flavours, or fancy sampling some excitingly exotic dish, the meal of your choice is now just a few button clicks away, delivered fresh and piping hot to your door.</p>
+</div>
+<div class="container con-1">
+  <p class="heading">Discover the Best Restaurants in Karachi</p>
+  <p class="para">Our team of experts have paid a visit to every restaurant you’ll find here, and checked they’re up to our strict standards - only Karachi's most beloved spots are here to order from. Quickly place and pay for your order online, and find your food delivered straight to your door in no time at all.</p>
+</div>
+<div class="container con-1">
+  <p class="heading">Why food delivery from foodpanda?</p>
+  <p class="para">- Do you fancy fine, high quality food from an upscale, refined eatery? Then you'll love the Mediterranean, Italian fusion cuisine available at Okra restaurant, or Cafe Aylanto.</p>
+    <p class="para">- Maybe you're in the mood for a hearty, beach-style barbecue? Kolachi restaurant or BBQ Tonight are ready and willing to oblige.</p>
+    <p class="para">- Or perhaps you feel that spice is nice? Saffron or Dumpukht are two of the hottest Indian takeaways in town.</p>
+    <p class="para">- And then there is the ultimate in social food, the pizza. Swap slices of this perennial crowd-pleaser with an order from Pompei Italian Restaurant Karachi, or 14th Street Pizza.</p>
+</div>
+<div class="container con-1">
+  <p class="heading">Food for your friends or the office?</p>
+  <p class="para">Let us do the hard part of entertaining and bring the food right to you and your friends. Alternatively if you need to organize some catering for your co-workers, are working late, or want to treat the team, you can conveniently order straight to your office.</p>
+
+</div>
+  </div>
+</section>
+<hr>
+<!-- Footer -->
+<section>
+<div class="container-fluid   mb-5 mt-5 ">
+<div class="row px-5">
+  <div class="col-lg-3 col-md-3 col-12">
+    <p class="footer-p">American Food Delivery in Karachi</p>
+    <p class="footer-p">Kababjees - Clifton, KFC - Boat Basin, McDonald's - Corniche, Red Apple - North Nazimabad, Burger Lab - Badar, Burger O'Clock</p>
+    <p class="footer-p">Pizza Delivery in Karachi</p>
+    <p class="footer-p">
+Pizza Hut - Khayaban E Shahbaz, California Pizza - Rashid Minhas Road, Royal Taste Pizza - Malir, Pizza Lover - Gulshan, Pizza 99, Cafe Bogie</p>
+  </div>
+    <div class="col-lg-3 col-md-3 col-12">
+    <p class="footer-p">Italian Food Delivery in Karachi</p>
+    <p class="footer-p">Broadway Pizza - DHA, 14th Street Pizza Co. - DHA, Expresso Shabhaz, California Pizza - DHA, Bella Vita, Golden Bite Pizza</p>
+    <p class="footer-p">Fast Food Delivery in Karachi</p>
+    <p class="footer-p">
+Kababjees - Johar, Milano Pizza & Fast Food, Choakas Food, Burridos, Roll Corner BAR BQ INN, EatFit</p>
+  </div>
+    <div class="col-lg-3 col-md-3 col-12">
+    <p class="footer-p">Pakistani Food Delivery in Karachi</p>
+    <p class="footer-p">Roll Inn, Daily Dubai Restaurant, Cafeela, A-One Snacks, Student Biryani - Saddar, Chairman Mao</p>
+  </div>
+    <div class="col-lg-3 col-md-3 col-12">
+    <p class="footer-p">Chinese Food Delivery in Karachi</p>
+    <p class="footer-p">Spicogetti, La Chine By Kababjees, Dumpling's, China Ming, Chop Soy - Gulshan, Choakas Food</p>
+  </div>
+</div>
+<center>
+  <p class="footer-p">
+    Bulgaria   |  Romania   |  Hong Kong   |  Philippines   |  Bangladesh   |  Singapore   |  Malaysia   |  Thailand   |  Taiwan   |  Laos  |  Cambodia   |  Myanmar  |  Japan
+  </p>
+  <center>
+</div>
+</section>
+<section>
+<div class="container-fluid  mb-5 mt-5 ">
+  <div class="row px-5">
+    <div class="col-lg-6 col-md-6 col-12">
+      <p class="footer-p">© 2024 Foodpanda. All rights reserved.</p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-end">
+      <p class="footer-p">Privacy Policy . Terms & Conditions . Cookie Policy . Modern
+
+</div>
+</section>
+<script src="js files/auth.js"></script>
+<script src="js files/app.js"></script>
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+
+      if (typeof initAuth === "function") {
+        initAuth();
+      }
+    });
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="css files/auth.css">
+
+<header class="container-fluid head-2">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="navbar-brand d-flex align-items-center">
+        <img src="assests/icons/favicon-icon.webp" height="50px" alt="">
+        <a class="brnd-name" href="index.html">foodpanda</a>
+      </div>
+      <div class="collapse navbar-collapse collapse-menu" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item d-flex">
+            <i class="bi bi-geo-alt-fill" style="color: #2E3138; margin-left: 5px; margin-top: 20px;"></i>
+            <!-- <button class="location">Karachi</button> -->
+            <input type="text" class="location" placeholder="Karachi.... ">
+          </li>
+          <div class="left-part-1 position-absolute end-0 d-lg-flex d-none">
+            <li class="nav-item">
+              <a href="login.html"><button class="btn-log">Log in</button></a>
+            </li>
+            <li class="nav-item">
+              <a href="signup.html"><button class="delivery-btn">Sign up for free delivery</button></a>
+            </li>
+            <li class="nav-item">
+              <a href="#"><button class="cart-icon"></button></a>
+            </li>
+            <li id="account-section" class="nav-item" style="display:none;">
+              <div class="account-menu">
+                <i class="bi bi-person-circle"></i>
+                <a href="account.html" class="account-a"><span id="userName">My Account</span></a>
+                <button onclick="logout()" class="btn btn-sm btn-outline-dark ms-2">Logout</button>
+              </div>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<script src="js files/auth.js"></script>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+
+      if (typeof initAuth === "function") {
+        initAuth();
+      }
+    });
+</script>

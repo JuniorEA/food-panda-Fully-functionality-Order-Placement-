@@ -1,0 +1,75 @@
+/* header 2 media qurey */
+
+
+
+@media (max-width:1024px ){
+  .collapse-menu{
+    padding-left: 150px;
+  }
+  .search-input{
+    width: 350px;
+  }
+
+}
+
+@media (max-width:768px){
+  .collapse-menu{
+    padding-left: 100px;
+  }
+  .btn-log{
+  margin-left:0px;
+  }
+  .delivery-btn{
+    margin-left:0px;
+}
+}
+@media (max-width:576px ){
+  .collapse-menu{
+    padding-left: 50px;
+  }
+   .btn-log{
+  margin-left:0px;
+  }
+  .delivery-btn{
+    margin-left:0px;
+}
+}
+@media (max-width:400px ){
+  .collapse-menu{
+    padding-left: 20px;
+  }
+   .btn-log{
+  margin-left:0px;
+  }
+  .delivery-btn{
+    margin-left:0px;
+}
+
+}
+
+@media (max-width:350px ){
+  .collapse-menu{
+    padding-left: 10px;
+  }
+   .btn-log{
+  margin-left:0px;
+  }
+  .delivery-btn{
+    margin-left:0px;
+  
+}
+.search-input{
+    width: 300px;
+     margin-top: 10px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .item-card { min-width: 220px; max-width: 220px; }
+}
+
+@media (max-width: 576px) {
+  .item-card { min-width: 170px; max-width: 170px; }
+  .item-card img { height: 120px; }
+}

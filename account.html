@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account - foodpanda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css files/auth.css">
+  <link rel="shortcut icon" href="./assests/icons/favicon-icon.webp" type="image/x-icon">
+
+  <style>
+    body { background-color: #f8f9fa; }
+    .account-wrapper { display: flex; gap: 20px; margin-top: 30px; }
+    .sidebar { width: 250px; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 20px; height: fit-content; }
+    .sidebar h5 { margin-bottom: 20px; font-weight: 600; color: #dc3545; }
+    .sidebar ul { list-style: none; padding: 0; }
+    .sidebar ul li { margin: 10px 0; }
+    .sidebar ul li button { width: 100%; text-align: left; background: none; border: none; padding: 10px; border-radius: 8px; transition: all 0.2s; }
+    .sidebar ul li button:hover, .sidebar ul li button.active { background-color: #dc3545; color: #fff; }
+    .content-area { flex: 1; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 25px; min-height: 400px; }
+    .address-card { border:1px solid #ccc; padding:10px; margin-bottom:10px; border-radius:8px; background:#f9f9f9; }
+    .order-card { border:1px solid #ccc; padding:10px; margin-bottom:10px; border-radius:8px; background:#f9f9f9; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header"></div>
+
+  <div class="container">
+    <div class="text-center mt-4">
+      <i class="bi bi-person-circle" style="font-size: 60px; color: #dc3545;"></i>
+      <h3 class="mt-2">Welcome, <span id="accountUser"></span></h3>
+    </div>
+
+    <div class="account-wrapper">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h5>My Account</h5>
+        <ul>
+          <li><button class="active" onclick="showSection('orders', this)"> Orders</button></li>
+          <li><button onclick="showSection('address', this)">Addresses</button></li>
+          <li><button onclick="showSection('settings', this)"> Settings</button></li>
+          <li><button onclick="logout()"> Log out</button></li>
+        </ul>
+      </div>
+
+      <!-- Content -->
+      <div class="content-area" id="content">
+        <h4>My Orders</h4>
+        <div id="orders-section"></div>
+      </div>
+    </div>
+  </div>
+
+<script src="js files/auth.js"></script>
+<script>
+  // Load header
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("header").innerHTML = data);
+
+  // Load user name
+  const userName = localStorage.getItem("userName") || "User";
+  document.getElementById("accountUser").textContent = userName;
+
+  // Logout
+  function logout() {
+    localStorage.removeItem("userName");
+    alert("You have been logged out!");
+    window.location.href = "login.html";
+  }
+
+  // Switch content
+  function showSection(section, btn) {
+    const content = document.getElementById("content");
+    document.querySelectorAll(".sidebar button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    if(section === "orders") {
+      const ordersContainer = document.createElement("div");
+      ordersContainer.id = "orders-section";
+
+      let orders = JSON.parse(localStorage.getItem("orders")) || [];
+      if(orders.length === 0) ordersContainer.innerHTML = "<p>No orders yet.</p>";
+
+      orders.forEach((order, orderIndex) => {
+        const orderDiv = document.createElement("div");
+        orderDiv.classList.add("order-card");
+
+        let orderHTML = `<h5>Order #${orderIndex + 1} - ${order.date}</h5><div class="order-items">`;
+        let orderTotal = 0;
+        order.items.forEach(item => {
+          const itemTotal = item.price * item.quantity;
+          orderTotal += itemTotal;
+          orderHTML += `<p>${item.name} × ${item.quantity} = ₹${itemTotal}</p>`;
+        });
+        orderHTML += `</div><p class="order-total"><strong>Total: ₹${orderTotal}</strong></p>`;
+        orderDiv.innerHTML = orderHTML;
+        ordersContainer.appendChild(orderDiv);
+      });
+
+      content.innerHTML = `<h4> My Orders</h4>`;
+      content.appendChild(ordersContainer);
+    }
+
+    if(section === "address") {
+      const addresses = JSON.parse(localStorage.getItem("addresses")) || [];
+      let html = `<h4> Saved Addresses</h4>`;
+      if(addresses.length === 0) html += `<p>No saved addresses yet.</p>`;
+      addresses.forEach(addr => {
+        html += `<div class="address-card"><strong>${addr.name}</strong>, ${addr.phone}, ${addr.line1}, ${addr.line2}, ${addr.city}, ${addr.postal}</div>`;
+      });
+
+      html += `
+        <button class="btn btn-danger mt-3" id="addAddressBtn">Add New Address</button>
+        <div id="newAddressForm" style="display:none; margin-top:15px;">
+          <input type="text" id="addrName" class="form-control mb-2" placeholder="Full Name">
+          <input type="text" id="addrPhone" class="form-control mb-2" placeholder="Phone Number">
+          <input type="text" id="addrLine1" class="form-control mb-2" placeholder="Address Line 1">
+          <input type="text" id="addrLine2" class="form-control mb-2" placeholder="Address Line 2">
+          <input type="text" id="addrCity" class="form-control mb-2" placeholder="City">
+          <input type="text" id="addrPostal" class="form-control mb-2" placeholder="Postal Code">
+          <button class="btn btn-success" id="saveAddressBtn">Save Address</button>
+        </div>
+      `;
+      content.innerHTML = html;
+
+      document.getElementById("addAddressBtn").addEventListener("click", () => {
+        document.getElementById("newAddressForm").style.display = "block";
+      });
+
+      document.getElementById("saveAddressBtn").addEventListener("click", () => {
+        const name = document.getElementById("addrName").value.trim();
+        const phone = document.getElementById("addrPhone").value.trim();
+        const line1 = document.getElementById("addrLine1").value.trim();
+        const line2 = document.getElementById("addrLine2").value.trim();
+        const city = document.getElementById("addrCity").value.trim();
+        const postal = document.getElementById("addrPostal").value.trim();
+
+        if(name && phone && line1 && city && postal) {
+          addresses.push({name, phone, line1, line2, city, postal});
+          localStorage.setItem("addresses", JSON.stringify(addresses));
+          alert("Address saved!");
+          showSection("address", btn); // refresh
+        } else {
+          alert("Please fill in all required fields!");
+        }
+      });
+    }
+
+    if(section === "settings") {
+      content.innerHTML = `
+        <h4> Account Settings</h4>
+        <p><strong>Name:</strong> ${userName}</p>
+        <p><strong>Email:</strong> example@mail.com</p>
+        <button class="btn btn-dark mt-3">Change Password</button>
+      `;
+    }
+  }
+
+  // Load default orders section
+  document.addEventListener("DOMContentLoaded", () => {
+    const accountUser = document.getElementById("accountUser");
+    const userName = localStorage.getItem("userName");
+    if(userName && accountUser) accountUser.textContent = userName;
+    else window.location.href = "login.html";
+
+    showSection("orders", document.querySelector(".sidebar button.active"));
+  });
+</script>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+      if(typeof initAuth === "function") initAuth();
+    });
+</script>
+
+</body>
+</html>

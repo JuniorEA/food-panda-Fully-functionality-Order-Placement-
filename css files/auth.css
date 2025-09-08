@@ -1,9 +1,12 @@
+*{
+  /* border: 1px solid red; */
+}
 
 :root{
     --primary-color:#D91A6C;
     --secondary-color:#DDDEDE;
     --text-color:#2E3138;
-    --bg-color:#f9f9f9;
+    --bg-color:#ededed;
     --border-color:#E5E5E5;
     --shadow-color:rgba(0,0,0,0.1);
     --shadow-hover:rgba(0,0,0,0.2);
@@ -27,6 +30,16 @@
 
 .head-2 {
   background-color: var(--bg-color);
+  height: auto !important;
+  border: 1px solid red;
+}
+@media (min-width:425px ) {
+  .head-2{
+    display: block !important;
+  height: auto;
+
+  }
+  
 }
 
 /* Location button */
@@ -46,6 +59,7 @@
   background-color: #F4F5F5;
   transition: var(--transition);
 }
+
 
 /* Login button */
 .btn-log {

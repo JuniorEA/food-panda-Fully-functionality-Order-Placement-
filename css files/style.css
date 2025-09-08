@@ -96,9 +96,7 @@ body{
     text-decoration:none;
 }
 
-.head-2{
-    background-color: var(--bg-color);
-}
+
 
 .location{
     color: var(--text-color);

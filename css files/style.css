@@ -481,8 +481,13 @@ border-radius: 0px 10px 10px 0px;
   flex-shrink: 0;
   cursor: pointer;
   transition: transform .25s ease, box-shadow .25s ease;
+  border-radius: 10px;
 }
 
+.restaurant-1{
+  border-radius: 10px !important;
+  margin-bottom: 10px !important;
+}
 .item-card img {
   width: 100%;
   height: 150px;

